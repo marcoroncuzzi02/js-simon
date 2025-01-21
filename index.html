@@ -8,21 +8,28 @@
 </head>
 <body class="bg-info-subtle">
     <div class="container bg-danger-subtle mt-3">
+
         <h2 class="text-center">HAI 30 SECONDI PER MEMORIZZARE I NUMERI</h2>
-        <div class="row gap-3 mx-2 text-center" id="displayFirst">
+
+        <div class="row gap-3 mx-2 text-center" id="display-first">
             <div class="random-number col bg-light my-2"></div>
             <div class="random-number col bg-light my-2"></div>
             <div class="random-number col bg-light my-2"></div>
             <div class="random-number col bg-light my-2"></div>
             <div class="random-number col bg-light my-2"></div>
         </div>
-        <div class="row gap-3 mx-2 text-center" id="displaySecond" style="display: none;">
-            <input class="random-input col bg-light my-2">
-            <input class="random-input col bg-light my-2">
-            <input class="random-input col bg-light my-2">
-            <input class="random-input col bg-light my-2">
-            <input class="random-input col bg-light my-2">
+
+        <div class="justify-center mx-2 gap-3" id="display-second" style="display: none;">
+            <input type="text" placeholder="scrivi un numero" class="random-input bg-light my-2">
+            <input type="text" placeholder="scrivi un numero" class="random-input bg-light my-2">
+            <input type="text" placeholder="scrivi un numero" class="random-input bg-light my-2">
+            <input type="text" placeholder="scrivi un numero" class="random-input bg-light my-2">
+            <input type="text" placeholder="scrivi un numero" class="random-input bg-light my-2">
         </div>
+
+        <h3 id="instruction"></h3>
+        <button id="btn" style="display: none;">vai</button>
+        <div id="stamp"></div>
     </div>
     <script src="./main.js"></script>
 </body>

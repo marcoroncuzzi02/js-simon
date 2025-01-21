@@ -20,27 +20,31 @@ let randomNumbers = document.getElementsByClassName('random-number')
 let randomInputs = document.getElementsByClassName('random-input')
 let displayFirst = document.getElementById ('display-first')
 let displaySecond = document.getElementById ('display-second')
+let instruction = document.getElementById ('instruction')
+let btn = document.getElementById('btn')
+let stamp = document.getElementById('stamp')
 
 function random(min,max) {
     return Math.floor((Math.random() * max) + min);
 }
 //con un ciclo for genero 5 numeri casuali
-for (let i=0; i<=randomNumbers.length; i++) {
+for (let i=0; i<randomNumbers.length; i++) {
     randomNumbers[i].innerHTML= random(1,99)
 }
 //imposto un setTimeOUt di 30 secondi dopo il quale scompaiono i numeri
 
 setTimeout(hidden, 3000)
 
-function hidden(){
-   randomNumbers.style.display = 'none'  
-   randomInputs.style.display = 'block'  
+function hidden(){    
+    displayFirst.style.display = 'none'  
+    displaySecond.style.display = 'flex'
+    instruction.innerHTML ='INSERISCI I NUMERI CHE TI RICORDI'  
+    btn.style.display = 'block'
 }
-
-// function hidden(){
-//     for (let i=0; i<=randomNumbers.length; i++){
-//         console.log(randomNumbers)
-//         randomNumbers[i].innerHTML= <input>
-//     }   
-// }
+//aggiungo un eventlistener dove faccio la comparazione dei 2 array
+btn.addEventListener('click', function(){
+    for (let i=0; i<randomNumbers.length; i++) {
+       console.log('ciao')
+    }
+})
    
