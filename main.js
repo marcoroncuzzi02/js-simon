@@ -18,6 +18,9 @@
 //seleziono gli elementi dell'html con getelementbyclass e creo un array
 let randomNumbers = document.getElementsByClassName('random-number')
 let randomInputs = document.getElementsByClassName('random-input')
+let displayFirst = document.getElementById ('display-first')
+let displaySecond = document.getElementById ('display-second')
+
 function random(min,max) {
     return Math.floor((Math.random() * max) + min);
 }
@@ -30,8 +33,14 @@ for (let i=0; i<=randomNumbers.length; i++) {
 setTimeout(hidden, 3000)
 
 function hidden(){
-    for (let i=0; i<=randomNumbers.length; i++){
-        console.log(randomNumbers);
-    }   
+   randomNumbers.style.display = 'none'  
+   randomInputs.style.display = 'block'  
 }
+
+// function hidden(){
+//     for (let i=0; i<=randomNumbers.length; i++){
+//         console.log(randomNumbers)
+//         randomNumbers[i].innerHTML= <input>
+//     }   
+// }
    
