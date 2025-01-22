@@ -42,9 +42,3 @@ function hidden(){
     btn.style.display = 'block'
 }
 //aggiungo un eventlistener dove faccio la comparazione dei 2 array
-btn.addEventListener('click', function(){
-    for (let i=0; i<randomNumbers.length; i++) {
-       console.log('ciao')
-    }
-})
-   
